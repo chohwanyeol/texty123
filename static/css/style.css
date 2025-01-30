@@ -1,0 +1,188 @@
+select {
+  width:171px;
+	height:45px; /* 원하는 너비설정 */  
+  font-family: inherit; /* 폰트 상속 */ 
+  background: url(https://farm1.staticflickr.com/379/19928272501_4ef877c265_t.jpg) no-repeat 95% 50%; /* 네이티브 화살표 대체 */ 
+  border: 1px solid #999; 
+  border-radius: 0px; /* iOS 둥근모서리 제거 */ 
+  -webkit-appearance: none; /* 네이티브 외형 감추기 */ 
+  -moz-appearance: none; 
+  appearance: none; }
+
+.main { 
+  overflow:hidden;
+	width:1440px;
+	height:1024px;
+	position:absolute;
+}
+.background { 
+	background-color:rgba(255, 255, 255, 1);
+	width:1440px;
+	height:1024px;
+	position:absolute;
+	left:0px;
+	top:0px;
+}
+.bar1 { 
+	background-color:rgba(188.42562675476074, 175.3125, 255, 1);
+	width:1440px;
+	height:66px;
+	position:absolute;
+	left:0px;
+	top:0px;
+}
+.bar2 { 
+	background-color:rgba(188.42562675476074, 175.3125, 255, 1);
+	width:1440px;
+	height:66px;
+	position:absolute;
+	left:0px;
+	top:204px;
+}
+
+.output { 
+  border:1px solid rgba(222.06250101327896, 222.06250101327896, 222.06250101327896, 1);
+	background-color:rgba(255, 255, 255, 1);
+	width:500px;
+	height:499px;
+	position:absolute;
+	left:786px;
+	top:330px;
+}
+
+.input { 
+  border:1px solid rgba(222.06250101327896, 222.06250101327896, 222.06250101327896, 1);
+	background-color:rgba(255, 255, 255, 1);
+	width:499px;
+	height:499px;
+	position:absolute;
+	left:132px;
+	top:330px;
+}
+
+.startBar { 
+	background-color:rgba(188.42562675476074, 175.3125, 255, 1);
+	width:180px;
+	height:61px;
+	position:absolute;
+	left:451px;
+	top:768px;
+}
+.startButton { 
+	color:rgba(255, 255, 255, 1);
+	width:180px;
+	height:61px;
+	position:absolute;
+	left:451px;
+	top:768px;
+	font-family:Roboto;
+	text-align:left;
+	font-size:24px;
+	letter-spacing:0;
+  background-color:transparent;
+  border: 0;
+  outline: 0;
+  cursor:pointer;
+}
+
+.title { 
+	color:rgba(0, 0, 0, 1);
+	width:117px;
+	height:81px;
+	position:absolute;
+	left:60px;
+	top:123px;
+	font-family:Pragati Narrow;
+	text-align:left;
+	font-size:48px;
+	letter-spacing:0;
+}
+.lineBar { 
+	background-color:rgba(255, 255, 255, 1);
+	width:171px;
+	height:45px;
+	position:absolute;
+	left:1213px;
+	top:214px;
+}
+
+.thinBar { 
+	width:1440px;
+	height:4px;
+	position:absolute;
+	left:0px;
+	top:191px;
+  border:5px solid rgba(188.42562675476074, 175.3125, 255, 1);
+}
+.e18_16 { 
+	background-color:rgba(188.42562675476074, 175.3125, 255, 1);
+	width:29px;
+	height:26px;
+	position:absolute;
+	left:1347px;
+	top:250px;
+}
+/*.lineButton { 
+	color:rgba(0, 0, 0, 1);
+	width:171px;
+	height:45px;
+	position:absolute;
+	left:1213px;
+	top:214px;
+	font-family:Roboto;
+	text-align:left;
+	font-size:18px;
+	letter-spacing:0;
+} */
+
+
+
+
+
+
+
+
+.arrow { 
+	transform: rotate(-0.6585431794035108deg);
+	width:91.0054931640625px;
+	height:2px;
+	position:absolute;
+	left:662px;
+	top:581px;
+  border:0px
+}
+
+
+.linkButton { 
+	color:rgba(255, 255, 255, 1);
+	width:66px;
+	height:59px;
+	position:absolute;
+	left:66px;
+	top:211px;
+	font-family:Font Awesome 5 Free;
+	text-align:left;
+	font-size:45px;
+	letter-spacing:0;
+  background-color:transparent;
+  border: 0;
+  outline: 0;
+  cursor:pointer;
+
+}
+.fileButton { 
+	color:rgba(255, 255, 255, 1);
+	width:66px;
+	height:59px;
+	position:absolute;
+	left:164px;
+	top:211px;
+	font-family:Font Awesome 5 Free;
+	text-align:left;
+	font-size:45px;
+	letter-spacing:0;
+  background-color:transparent;
+  border: 0;
+  outline: 0;
+  cursor:pointer;
+}

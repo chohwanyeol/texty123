@@ -1,0 +1,111 @@
+{% with messages = get_flashed_messages() %} {% if messages %} <script> alert("{{messages[-1]}}") </script> {% endif %} {% endwith %}
+
+
+
+<!DOCTYPE html>
+
+
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width">
+	<title>repl.it</title>
+	<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+
+</head>
+
+<script src = "{{ url_for('static', filename='javascript/main.js') }}">
+
+
+</script>
+<body>
+
+
+	<div class=main>
+		<div class="background">
+			<div class="bar1"></div>
+			<div class="bar2"></div>
+			
+      <form for = "text" action = "/inputText" method="get">
+      <textarea class="output" readonly>{{text_out}}</textarea>
+
+      
+       <textarea id = "inputT" class="input" name="text" value = "itext" placeholder="요약할 내용을 입력하세요." rows="3">{{text}}</textarea>
+       <div class="startBar"></div>
+       <button id = "sB" class="startButton" type="submit" style="text-align: center;">실행하기</button>
+      <span  class="title">TEXTY</span>
+
+
+      <div class="lineBar">
+      <select name= "choose" id="browsers" name="browsers" style="vertical-align: middle; text-align-last: center">
+        <option value = "none" hidden>요약비율</option>
+        <option value="10">10%</option>
+        <option value="20">20%</option>
+        <option value="30">30%</option>
+        <option value="40">40%</option>
+        <option value="50">50%</option>
+        <option value="60">60%</option>
+        <option value="70">70%</option>
+        <option value="80">80%</option>
+        <option value="90">90%</option>
+      </select>
+    </div>
+
+
+      </form>
+
+  
+    
+  
+
+
+    
+ 
+
+    <div class="thinBar"></div>
+  
+    
+    <div class="arrow"><img src = "static/image/arrow.png" width="80" height="50"></div>
+    
+    <button class="linkButton" onclick="window.open('link.html','링크','width=430,height=250,location=no,status=no,scrollbars=yes');">
+      <img src = "static/image/link.png" width="66" height="50">
+    </button>
+    
+    <form action = "/file" method="POST" enctype = "multipart/form-data">
+    <div class = "fileButton">
+      <label for ="file-input">
+        <img src = "static/image/file.png" width="66" height="50">
+      </label>
+    <input id="file-input" type="file" name="fileB" style="display:none;" onchange="this.form.submit()">
+    
+    </form>
+ 
+  </div>
+</div>
+<!--
+    <form action = "/file" method="POST" enctype = "multipart/form-data">
+    <div class = "fileButton">
+        <img src = "static/image/file.png" width="66" height="50"
+        onclick="window.open('http://localhost:5000/upload', 'new', 'width=430, height=250');">
+        </div>-->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+
+<script>
+$("#search_form_input").keyup(function(){
+    var text = $(this).val();
+
+    $.ajax({
+      url: "/suggestions",
+      type: "get",
+      data: {jsdata: text},
+      success: function(response) {
+        $("#place_for_suggestions").html(response);
+      },
+      error: function(xhr) {
+        //Do Something to handle error
+      }
+    });
+});
+</script>
+</body>
+</html>
